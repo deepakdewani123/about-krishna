@@ -1,14 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Krishna
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content no-bounce>
+
+  <div class="chat-window">
+    <chat-message *ngFor="let message of messages$ | async" [message]="message"></chat-message>
+  </div>
+
 </ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10 class="text-input-col">
+        <ion-input class="user-input" [(ngModel)]="userInput" type="text" placeholder="Type a message" (keydown.enter)="onEnter()"></ion-input>
+      </ion-col>
+      <ion-col class="button-input-col" col-2 (click)="onEnter()">
+        <ion-icon class="plane-icon" name="paper-plane"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

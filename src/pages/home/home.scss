@@ -1,3 +1,46 @@
 page-home {
-
+  // * {
+  //   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  // }
+  ion-content {
+    // .scroll-content {
+      // display: flex;
+      // align-items: flex-end;
+    // }
+  }
+  ion-footer {
+    .grid {
+      border-top: 1px solid #c8c7cc;
+      padding: 0px;
+      height: 45px;
+    }
+    ion-row {
+      .button-input-col {
+        flex: 0 0 16.66667%;
+        width: 16.66667%;
+        max-width: 16.66667%;
+        text-align: center;
+        margin: auto;
+        .plane-icon {
+          font-size: 2em;
+        }
+      }
+      .text-input-col {
+        .user-input {
+          position: absolute;
+          display: block;
+          flex: 1;
+          width: 100%;
+          bottom: 0px;
+          .text-input-ios,
+          .text-input-md {
+            margin: 11px 8px 11px 0;
+            padding: 0;
+            margin-left: 15px;
+            width: calc(100% - 8px);
+          }
+        }
+      }
+    }
+  }
 }
