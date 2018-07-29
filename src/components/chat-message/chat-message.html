@@ -1,0 +1,22 @@
+<div class="msg-container" [ngClass]="{'base-sent': !incoming, 'base-receive': incoming}">
+
+    <div class="avatar" *ngIf="incoming">
+      <div class="assistant">
+        <img [src]="botImage">
+      </div>
+    </div>
+
+    <div class="messages" [ngClass]="{'msg-sent': !incoming, 'msg-receive': incoming}">
+      <div *ngIf="message.type === 'default'" class="default_message">
+        <span class="message_text">{{message.text}}</span>
+        <span class="timestamp" *ngIf="message.type === 'default'">{{message.sentAt | date: 'h:mm a' }}</span>
+      </div>
+    </div>
+
+    <div class="avatar" *ngIf="!incoming">
+      <div class="user">
+          <img [src]="userImage">
+      </div>
+    </div>
+
+  </div>
