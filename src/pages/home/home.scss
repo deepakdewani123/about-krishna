@@ -3,10 +3,13 @@ page-home {
   //   font-family: Verdana, Geneva, Tahoma, sans-serif;
   // }
   ion-content {
-    // .scroll-content {
-      // display: flex;
-      // align-items: flex-end;
-    // }
+    .scroll-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-window {
+      margin-top: auto;
+    }
   }
   ion-footer {
     .grid {
@@ -22,11 +25,13 @@ page-home {
         text-align: center;
         margin: auto;
         .plane-icon {
+          color: white;
           font-size: 2em;
         }
       }
       .text-input-col {
         .user-input {
+          color: white;
           position: absolute;
           display: block;
           flex: 1;
